@@ -5,7 +5,9 @@ using UnityEngine;
 [CustomPropertyDrawer(typeof(FloatReference))]
 [CustomPropertyDrawer(typeof(IntReference))]
 [CustomPropertyDrawer(typeof(Vector2Reference))]
+[CustomPropertyDrawer(typeof(Vector3Reference))]
 [CustomPropertyDrawer(typeof(GameObjectReference))]
+[CustomPropertyDrawer(typeof(TransformReference))]
 public class ReferenceDrawer : PropertyDrawer
 {
     /// <summary>
