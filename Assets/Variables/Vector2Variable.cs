@@ -17,7 +17,6 @@ namespace Assets.Variables
         }
     }
 
-
     [Serializable]
     public class Vector2Reference
     {
