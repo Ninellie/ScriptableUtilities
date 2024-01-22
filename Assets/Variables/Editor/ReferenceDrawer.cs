@@ -4,6 +4,7 @@ using UnityEngine;
 
 [CustomPropertyDrawer(typeof(FloatReference))]
 [CustomPropertyDrawer(typeof(IntReference))]
+[CustomPropertyDrawer(typeof(UIntReference))]
 [CustomPropertyDrawer(typeof(Vector2Reference))]
 [CustomPropertyDrawer(typeof(Vector3Reference))]
 [CustomPropertyDrawer(typeof(GameObjectReference))]
