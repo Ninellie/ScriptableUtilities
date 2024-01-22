@@ -1,8 +1,11 @@
+using Assets.Variables;
 using UnityEditor;
 using UnityEngine;
 
-[CustomPropertyDrawer(typeof(IntReference))]
 [CustomPropertyDrawer(typeof(FloatReference))]
+[CustomPropertyDrawer(typeof(IntReference))]
+[CustomPropertyDrawer(typeof(Vector2Reference))]
+[CustomPropertyDrawer(typeof(GameObjectReference))]
 public class ReferenceDrawer : PropertyDrawer
 {
     /// <summary>
