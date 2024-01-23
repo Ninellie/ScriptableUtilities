@@ -29,4 +29,21 @@ namespace Assets.Variables
             return reference.Value;
         }
     }
+
+    public class TransformVariableSetter : MonoBehaviour
+    {
+        public TransformVariable transformVariable;
+        public bool setOnAwake;
+        private void Awake()
+        {
+            if (!setOnAwake) return;
+            Set();
+        }
+
+        public void Set()
+        {
+            if (transformVariable == null) return;
+            transformVariable.value = transform;
+        }
+    }
 }
