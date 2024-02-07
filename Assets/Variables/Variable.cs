@@ -1,20 +1,23 @@
 using UnityEngine;
 
-public abstract class Variable<T> : ScriptableObject
+namespace Assets.Variables
 {
+    public abstract class Variable<T> : ScriptableObject
+    {
 #if UNITY_EDITOR
-    [Multiline]
-    public string developerDescription = "";
+        [Multiline]
+        public string developerDescription = "";
 #endif
-    public T value;
+        public T value;
 
-    public void SetValue(T value)
-    {
-        this.value = value;
-    }
+        public void SetValue(T value)
+        {
+            this.value = value;
+        }
 
-    public void SetValue(Variable<T> value)
-    {
-        this.value = value.value;
+        public void SetValue(Variable<T> value)
+        {
+            this.value = value.value;
+        }
     }
 }
