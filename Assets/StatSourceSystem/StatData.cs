@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Assets.StatSourceSystem
 {
     /// <summary>
-    /// Dynamic class for inner use
+    /// Contains data about single stat
     /// </summary>
     [Serializable]
     public class StatData

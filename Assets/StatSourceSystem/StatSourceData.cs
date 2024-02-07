@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Assets.StatSourceSystem
 {
+    /// <summary>
+    /// Contains data about single stat source
+    /// </summary>
     [Serializable]
     public class StatSourceData
     {
