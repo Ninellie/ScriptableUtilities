@@ -34,10 +34,28 @@ namespace Assets.StatSourceSystem
             UpdateStat(statSourceData.StatId, GetStatSources());
         }
 
+        public void AddStatSource(StatSourceData[] statSourceData)
+        {
+            foreach (var data in statSourceData)
+            {
+                _statSources.Add(data); 
+                UpdateStat(data.StatId, GetStatSources());
+            }
+        }
+
         public void RemoveStatSource(StatSourceData statSourceData)
         {
             _statSources.Remove(statSourceData);
             UpdateStat(statSourceData.StatId, GetStatSources());
+        }
+
+        public void RemoveStatSource(StatSourceData[] statSourceData)
+        {
+            foreach (var data in statSourceData)
+            {
+                _statSources.Remove(data);
+                UpdateStat(data.StatId, GetStatSources());
+            }
         }
 
         public void UpdateStat(StatId statId, List<StatSourceData> statSources)
