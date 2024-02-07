@@ -54,6 +54,15 @@ namespace Assets.StatSourceSystem
             }
         }
 
+        public void AddStatSource(StatSourcePack statSourcePack)
+        {
+            foreach (var data in statSourcePack.StatSources)
+            {
+                _statSources.Add(data);
+                UpdateStat(data.StatId, GetStatSources());
+            }
+        }
+
         public void RemoveStatSource(StatSourceData statSourceData)
         {
             _statSources.Remove(statSourceData);
@@ -63,6 +72,15 @@ namespace Assets.StatSourceSystem
         public void RemoveStatSource(StatSourceData[] statSourceData)
         {
             foreach (var data in statSourceData)
+            {
+                _statSources.Remove(data);
+                UpdateStat(data.StatId, GetStatSources());
+            }
+        }
+
+        public void RemoveStatSource(StatSourcePack statSourcePack)
+        {
+            foreach (var data in statSourcePack.StatSources)
             {
                 _statSources.Remove(data);
                 UpdateStat(data.StatId, GetStatSources());
